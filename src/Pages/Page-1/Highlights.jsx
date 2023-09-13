@@ -61,7 +61,7 @@ export default function Highlights() {
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-          HIGHLIGHTS OF INITIATIVES
+          Highlights Of Initiatives
         </Heading>
         <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
           Under Waste To Wealth Mission
