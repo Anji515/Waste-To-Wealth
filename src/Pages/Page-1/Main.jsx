@@ -3,6 +3,7 @@ import Highlights from "./Highlights";
 import Header from "./Header";
 import { Flex } from "@chakra-ui/react";
 import ReusableCard from "../../Components/Crads";
+import Technology from "./Technology";
 
 const Main = () => {
   return (
@@ -21,6 +22,9 @@ const Main = () => {
       </Flex>
       <br />
       <Highlights />
+      <br />
+      <br />
+      <Technology />
     </div>
   );
 };
