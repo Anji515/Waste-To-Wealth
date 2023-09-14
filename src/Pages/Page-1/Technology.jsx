@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
 const Technology = () => {
   return (
-    <Box border={"1px solid orange"} p={2} background={"green.400"}>
+    <Box border={"0px solid orange"} p={2} background={'whatsapp.200'}>
       <br />
       <br />
       <Heading>Technology Deployments</Heading>
