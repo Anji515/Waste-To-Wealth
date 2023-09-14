@@ -121,7 +121,7 @@ const Technology = () => {
         boxShadow="rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px"
       >
         <Heading>Here is the Impact ....</Heading>
-        <Text fontSize={["sm", "md"]}>
+        <Text fontSize={["sm", "md"]} textAlign={'left'}>
           The DM-80 unit was in operation for a duration of one year from 3rd
           January 2022 to 2nd January 2023. During this period, Cleantec Infra
           operated the unit to clean and desilt approximately a 3 km stretch of
@@ -154,6 +154,72 @@ const Technology = () => {
           textDecoration={"underline"}
         >
           Desilting of Barapullah drain
+        </Text>
+      </VStack>
+
+      <VStack
+        width={["95%", "70%"]}
+        marginTop={"20px"}
+        bg={"whatsapp.400"}
+        borderRadius={16}
+        margin={"15px auto"}
+        padding={5}
+        boxShadow="rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px"
+      >
+        <Heading>Here is the Impact ....</Heading>
+        <Text fontSize={["sm", "md"]} textAlign={'left'}>
+          At the Technology Park, 10 TPD Municipal waste is onsite segregated
+          and treated, resulting in volume reduction and conversion into 1 TPD
+          compostable fractions, 2 TPD combustibles fractions, 1.5 TPD
+          recyclables. The facility also has a waste compaction unit for
+          reducing the volume for handling & transportation. The combustible
+          waste will then be processed on-site, leaving only 5-10% of inerts
+          reaching landfills. In addition to incoming MSW, floating waste from
+          the adjacent 52-cusec drain is also collected and processed on-site.
+<br />
+<br />
+          This will also ensure SWM compliance of Urban Local Bodies under Solid
+          Waste Management Rules 2016 and for reducing the load on landfill
+          sites, without the procurement of new land for setup and disposal.
+<br />
+<br />
+          Decentralized processing of waste is a step towards “Zero Landfill”
+          with the added advantage of reduction in the transportation of the
+          waste.
+        </Text>
+        <br />
+        <Flex
+          width={"90%"}
+          flexWrap={["wrap", "nowrap"]}
+          margin={"auto"}
+          alignItems={"center"}
+          gap={20}
+        >
+          <Box h={"400px"} w={"100%"}>
+            <Image
+              borderRadius={16}
+              h={"400px"}
+              src="https://wastetowealth.vercel.app/assets/dwmtp-62c15804.png"
+            />
+            <Heading fontSize={18}>Before</Heading>
+          </Box>
+
+          <Box h={"400px"} w={"100%"}>
+            <Image
+              borderRadius={16}
+              h={"400px"}
+              src="https://wastetowealth.vercel.app/assets/dwmtp1-f5029a63.png"
+            />
+            <Heading fontSize={18}>After</Heading>
+          </Box>
+        </Flex>
+        <Text
+          fontFamily={"-moz-initial"}
+          fontSize={["sm", "md"]}
+          mt={10}
+          textDecoration={"underline"}
+        >
+        Decentralized Waste Management Technology Park        
         </Text>
       </VStack>
     </Box>
