@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Image, Text, Box, SimpleGrid, Center } from "@chakra-ui/react";
+import { Flex, Image, Text, Box, SimpleGrid, Center, Heading } from "@chakra-ui/react";
 
 const EmployeeCard = ({ name, profession, imageSrc }) => {
   return (
@@ -12,7 +12,13 @@ const EmployeeCard = ({ name, profession, imageSrc }) => {
       p={2}
       bgColor="white"
       textAlign="center"
-          >
+      transition="transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out"
+      _hover={{
+        transform: "scale(1.05)",
+        boxShadow: ["md","lg"],
+        bgColor: ["gray.200", "gray.100"],
+      }}
+      >
       <Center
         border={"1px solid grey"}
         boxShadow= "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
@@ -91,8 +97,10 @@ const TeamContainer = () => {
   ];
 
   return (
-    <Flex direction="column" alignItems="center">
-      <SimpleGrid columns={[2,3,4]} spacing={4}>
+    <Flex mt={5} direction="column" alignItems="center">
+      <br />
+      <Heading color={'orange.400'} mb={10} cursor={'pointer'} _hover={{textDecoration:'underline'}}>HERE IS THE DETAILS OF TEAM</Heading>
+      <SimpleGrid columns={[2,3,4]} spacing={10}>
         {cards.map((employee, index) => (
           <EmployeeCard
             key={employee.name}

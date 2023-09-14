@@ -28,9 +28,9 @@ const Card = ({ heading, description, icon }) => {
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
-      cursor={'pointer'}
-      transition={'transform 0.5s'}
-      _hover={{ width:'110%'}}
+      cursor={"pointer"}
+      transition={"transform 0.5s"}
+      _hover={{ width: "110%" }}
       p={5}
     >
       <Stack align={"start"} spacing={2}>
@@ -60,8 +60,14 @@ export default function Highlights() {
   return (
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-          Highlights Of Initiatives
+        <Heading
+          color={"Highlight"}
+          cursor={"pointer"}
+          _hover={{ textDecoration: "underline" }}
+          fontSize={{ base: "2xl", sm: "4xl" }}
+          fontWeight={"bold"}
+        >
+          HIGHLIGHTS OF INITIATIVES
         </Heading>
         <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
           Under Waste To Wealth Mission

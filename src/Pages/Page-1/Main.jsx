@@ -37,8 +37,9 @@ const Main = () => {
       <Technology />
       <br />
       <TeamContainer/>
-      <br />
       <Policies/>
+      <br />
+      <br />
     </div>
   );
 };

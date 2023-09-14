@@ -16,7 +16,7 @@ const ReusableAccordion = ({ data }) => {
   return (
     <Accordion border={'1px solid grey'} allowMultiple width="80%" rounded="lg">
         <SimpleGrid
-        columns={[2,4]}
+        columns={[1,4]}
         gap={10}
         p={5}
         width={'100%'}
@@ -32,15 +32,25 @@ const ReusableAccordion = ({ data }) => {
               justifyContent="space-between"
               p={4}
             >
-              <Text fontSize="sm"> <strong>{mainHeading.main}</strong></Text>
+              <Text fontSize="lg" color={'whatsapp.800'}> <strong>{mainHeading.main}</strong></Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
-              <Text color="gray.600">
+              <Text color="orange.600">
                 {mainHeading.sub.map((subHeading) => (
                   <Box textAlign={'left'} key={subHeading.description} >
-                  {console.log(subHeading.description)}
-                <strong>{subHeading.title}</strong>: <br /><UnorderedList ml="20px" fontSize={'14px'}>{subHeading?.description?.map((el)=><ListItem key={el}>{el}</ListItem>)}</UnorderedList>
+                  {/* {console.log(subHeading.description)} */}
+                <Accordion allowMultiple rounded={'lg'} gap={10}> 
+                  <AccordionItem>
+                    <AccordionButton border={'1px solid grey'} rounded={'md'}>
+                  <strong>{subHeading.title}</strong>
+                  <ChevronDownIcon/>
+                    </AccordionButton>
+                    <AccordionPanel>
+                    <UnorderedList ml="20px" fontSize={'14px'}>{subHeading?.description?.map((el)=><ListItem fontSize={'15px'} key={el}>{el}</ListItem>)}</UnorderedList>
+                    </AccordionPanel>
+                  </AccordionItem>
+                  </Accordion> 
               </Box>
                 ))}
               </Text>
@@ -48,7 +58,7 @@ const ReusableAccordion = ({ data }) => {
           </AccordionItem>
         ))}
     </SimpleGrid>
-      </Accordion>
+    </Accordion>
   );
 };
 
