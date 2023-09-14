@@ -6,6 +6,9 @@ import {
   AccordionPanel,
   Text,
   SimpleGrid,
+  Box,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
@@ -35,9 +38,10 @@ const ReusableAccordion = ({ data }) => {
             <AccordionPanel pb={4}>
               <Text color="gray.600">
                 {mainHeading.sub.map((subHeading) => (
-                  <div key={subHeading.description}>
-                    <strong>{subHeading.title}</strong>: {subHeading.description}
-                  </div>
+                  <Box textAlign={'left'} key={subHeading.description} >
+                  {console.log(subHeading.description)}
+                <strong>{subHeading.title}</strong>: <br /><UnorderedList ml="20px" fontSize={'14px'}>{subHeading?.description?.map((el)=><ListItem key={el}>{el}</ListItem>)}</UnorderedList>
+              </Box>
                 ))}
               </Text>
             </AccordionPanel>
