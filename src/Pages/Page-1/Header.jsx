@@ -1,9 +1,11 @@
+import React from "react";
 import {
   Stack,
   Flex,
   Text,
   useBreakpointValue,
   HStack,
+  Box,
 } from "@chakra-ui/react";
 import image from "../../assets/header.jpg";
 
@@ -22,22 +24,23 @@ export default function Header() {
         justify={"center"}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+        flexWrap={'wrap'}
       >
         <Stack maxW={"2xl"} align={"center"} spacing={6}>
           <Text
             color={"rgb(134, 252, 0)"}
             fontWeight={700}
-            fontFamily={'cursive'}
+            fontFamily={"cursive"}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "3xl", md: "5xl" })}
           >
             About The Mission
           </Text>
           <Text
-            color={"white"}
+            color={useBreakpointValue({ base: "black", md: "white" })}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "2xl", md: "2xl" })}
+            fontSize={useBreakpointValue({ base: "md", md: "2xl" })}
           >
             The Waste to Wealth Mission, led by the Office of the Principal
             Scientific Advisor to the Government of India, is dedicated to
@@ -47,9 +50,22 @@ export default function Header() {
             into a zero landfill and zero waste nation.
           </Text>
         </Stack>
-        <Stack>
-        <iframe width="500" height="280" src="https://www.youtube.com/embed/-dFtR0sGqmM" title="Prime Minister Modi discusses Waste to Wealth at launch event of Swachh Bharat Mission- Urban 2.0" allowfullscreen></iframe>
-        </Stack>
+        <Box
+          w={useBreakpointValue({ base: "100%", md: "500px" })}
+          h={useBreakpointValue({ base: "280px", md: "280px" })}
+          borderWidth="1px"
+          borderRadius="lg"
+          overflow="hidden"
+          boxShadow="lg"
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/-dFtR0sGqmM"
+            title="Prime Minister Modi discusses Waste to Wealth at launch event of Swachh Bharat Mission- Urban 2.0"
+            allowFullScreen
+          ></iframe>
+        </Box>
       </HStack>
     </Flex>
   );

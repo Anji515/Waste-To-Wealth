@@ -1,14 +1,17 @@
 import React from 'react';
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Text, useBreakpointValue } from '@chakra-ui/react';
 
 const ReusableCard = ({ heading, description }) => {
+  const cardWidth = useBreakpointValue({ base: '100%', md: '80%' });
+  const cardHeight = useBreakpointValue({ base: 'auto', md: '250px' });
+
   return (
     <Flex
       flexDirection="column"
       alignItems="center"
       boxShadow="lg"
-      width={'80%'}
-      height={'250px'}
+      width={cardWidth}
+      height={cardHeight}
       border={'1px solid black'}
       p={4}
       borderRadius="lg"
