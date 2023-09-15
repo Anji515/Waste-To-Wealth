@@ -37,7 +37,7 @@ const ReusableAccordion = ({ data }) => {
               <Text fontSize="lg" color={'whatsapp.800'}> <strong>{mainHeading.main}</strong></Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
-            <AccordionPanel pb={4} position={"absolute"}  bgColor={"gray.50"} zIndex={1}>
+            <AccordionPanel pb={4} position={"absolute"} allowMultiple bgColor={"gray.50"} zIndex={1}>
               <Text color="orange.600">
                 {mainHeading.sub.map((subHeading) => (
                   <Box textAlign={'left'} key={subHeading.description}>
