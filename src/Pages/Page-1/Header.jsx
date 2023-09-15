@@ -30,7 +30,6 @@ export default function Header() {
           <Text
             color={"rgb(134, 252, 0)"}
             fontWeight={700}
-            fontFamily={"cursive"}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "3xl", md: "5xl" })}
           >
