@@ -12,6 +12,7 @@ import {
   Select,
 } from "@chakra-ui/react";
 import { FaFacebookF, FaHome, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobile] = useMediaQuery("(max-width: 600px)");
@@ -38,16 +39,18 @@ const Navbar = () => {
         <MobileMenu />
       ) : (
         <Flex fontSize={"22px"} gap={5} align={"center"}>
+          <Link to='/'>
           <Flex
             _hover={{ textDecoration: "underline" }}
             justifyContent={"center"}
             gap={1}
             align={"center"}
             cursor={'pointer'}
-          >
+            >
             <FaHome size={"20px"} />
             <strong>Home Page</strong>
           </Flex>
+            </Link>
           <DropdownMenu />
           <Divider orientation="vertical" borderColor={'black'} height="28px" mx={2} />
           <FaFacebookF />
@@ -60,6 +63,7 @@ const Navbar = () => {
 };
 
 const MobileMenu = () => {
+
   return (
     <Menu>
       <MenuButton
@@ -89,6 +93,8 @@ const MobileMenu = () => {
 };
 
 const DropdownMenu = () => {
+
+  const navigate=useNavigate()
   return (
     <Select
       cursor="pointer"
@@ -99,8 +105,8 @@ const DropdownMenu = () => {
       _focus={{ outline: "none" }}
     >
       <option value="cohort1"><strong marginLeft={2}>Swacchta Saarathi Fellowship</strong></option>
-      <option value="cohort1">Cohort 1</option>
-      <option value="cohort2">Cohort 2</option>
+      <option value="cohort1" onClick={()=>(navigate('cohort1'))}>Cohort 1</option>
+      <option value="cohort2" onClick={()=>(navigate('cohort2'))}>Cohort 2</option>
     </Select>
   );
 };

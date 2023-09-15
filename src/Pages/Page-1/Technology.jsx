@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
 const Technology = () => {
   return (
-    <Box border={"0px solid orange"} p={2} background={'whatsapp.200'}>
+    <Box border={"0px solid orange"} p={2} background={"whatsapp.200"}>
       <br />
       <br />
       <Heading>Technology Deployments</Heading>
@@ -121,7 +121,7 @@ const Technology = () => {
         boxShadow="rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px"
       >
         <Heading>Here is the Impact ....</Heading>
-        <Text fontSize={["sm", "md"]} textAlign={'left'}>
+        <Text fontSize={["sm", "md"]} textAlign={"left"}>
           The DM-80 unit was in operation for a duration of one year from 3rd
           January 2022 to 2nd January 2023. During this period, Cleantec Infra
           operated the unit to clean and desilt approximately a 3 km stretch of
@@ -166,8 +166,8 @@ const Technology = () => {
         padding={5}
         boxShadow="rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px"
       >
-        <Heading>Here is the Impact ....</Heading>
-        <Text fontSize={["sm", "md"]} textAlign={'left'}>
+        <Heading>The Impact ....</Heading>
+        <Text fontSize={["sm", "md"]} textAlign={"left"}>
           At the Technology Park, 10 TPD Municipal waste is onsite segregated
           and treated, resulting in volume reduction and conversion into 1 TPD
           compostable fractions, 2 TPD combustibles fractions, 1.5 TPD
@@ -176,13 +176,13 @@ const Technology = () => {
           waste will then be processed on-site, leaving only 5-10% of inerts
           reaching landfills. In addition to incoming MSW, floating waste from
           the adjacent 52-cusec drain is also collected and processed on-site.
-<br />
-<br />
+          <br />
+          <br />
           This will also ensure SWM compliance of Urban Local Bodies under Solid
           Waste Management Rules 2016 and for reducing the load on landfill
           sites, without the procurement of new land for setup and disposal.
-<br />
-<br />
+          <br />
+          <br />
           Decentralized processing of waste is a step towards “Zero Landfill”
           with the added advantage of reduction in the transportation of the
           waste.
@@ -219,7 +219,7 @@ const Technology = () => {
           mt={10}
           textDecoration={"underline"}
         >
-        Decentralized Waste Management Technology Park        
+          Decentralized Waste Management Technology Park
         </Text>
       </VStack>
     </Box>
